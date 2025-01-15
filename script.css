@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.example-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.example-box {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.answer-input {
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 80px;
+}
+
+.answer-input.error-input {
+  color: #FA8072;
+}
+
+.green-blocks-row {
+  display: flex;
+  gap: 5px;
+}
+
+.block {
+  width: 20px;
+  height: 20px;
+  background-color: #32CD32;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.done-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #A9A9A9;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.done-button:hover:not([disabled]) {
+  background-color: #AFEEEE;
+  cursor: pointer;
+}
+
+.done-button.right {
+  background-color: #228B22;
+}
+
+.done-button.wrong {
+  background-color: #FA8072;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
